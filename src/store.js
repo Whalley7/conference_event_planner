@@ -1,9 +1,12 @@
-// store.js
-import { configureStore } from '@reduxjs/toolkit';
-import venueReducer from './venueSlice';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import App from './App';
 
-export default configureStore({
-  reducer: {
-    venue: venueReducer,
-  },
-});
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
