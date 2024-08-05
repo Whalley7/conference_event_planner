@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import venueReducer from './venueSlice';
+// added adReducer and mealsRedcer
 import avReducer from './avSlice';
 import mealsReducer from './mealsSlice';
 
@@ -10,6 +11,7 @@ const store = configureStore({
     av: avReducer,
     meals: mealsReducer,
   },
+  //added middleware to the store.js
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
