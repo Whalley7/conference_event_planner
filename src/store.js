@@ -1,18 +1,20 @@
-// store.js
 import { configureStore } from '@reduxjs/toolkit';
 import venueReducer from './venueSlice';
-//add avSlice from ./avSlcie
 import avReducer from './avSlice';
-//add mealSlice from ./mealSlice
-export default configureStore({
+import mealsReducer from './mealsSlice';
+
+// Configure the Redux store
+const store = configureStore({
   reducer: {
     venue: venueReducer,
     av: avReducer,
-    meals: mealsReducer
+    meals: mealsReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
+  devTools: process.env.NODE_ENV !== 'production',
 });
 
-
-
-
-
+export default store;
