@@ -1,3 +1,3 @@
 # coding-project-template
 
-Whalley7/Web-Development-Milestone-Project-1-main
+https://whalley7.github.io/conference_event_planner/
