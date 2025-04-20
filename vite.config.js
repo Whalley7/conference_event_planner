@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/conference_event_planner/', // 👈 Add this line
+  base: '/conference_event_planner/',
+  server: {
+    host: true,
+    allowedHosts: ['.gitpod.io'] // ✅ allow Gitpod
+  }
 });
