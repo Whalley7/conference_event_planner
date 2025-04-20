@@ -1,7 +1,7 @@
 {
   "name": "eventone",
   "private": true,
-  "homepage": "https://whalley7.github.io/",conference_event_planner",
+  "homepage": "https://whalley7.github.io/conference_event_planner",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -11,9 +11,6 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite build; vite preview --host"
   },
-  ...
-}
-
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
     "react": "^18.3.1",
